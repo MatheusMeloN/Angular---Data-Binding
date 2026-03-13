@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { MeuForm } from "../meu-form/meu-form";
 
 @Component({
   selector: 'app-data-binding',
-  imports: [],
+  imports: [MeuForm],
   templateUrl: './data-binding.html',
   styleUrl: './data-binding.scss',
 })
