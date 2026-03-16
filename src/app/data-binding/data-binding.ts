@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { MeuForm } from "../meu-form/meu-form";
 import { InputProperty } from "../input-property/input-property";
+import { OutputProperty } from "../output-property/output-property";
 
 @Component({
   selector: 'app-data-binding',
-  imports: [MeuForm, InputProperty],
+  imports: [MeuForm, InputProperty, OutputProperty],
   templateUrl: './data-binding.html',
   styleUrl: './data-binding.scss',
 })
@@ -22,6 +23,8 @@ export class DataBinding {
   isMouseOver: boolean = false;
 
   nomeDoCurso: string = 'Angular';
+
+  valorInicial: number = 20;
 
   getValor(){
     return 1;
@@ -46,6 +49,10 @@ export class DataBinding {
 
   onMouseOverOut(){
     this.isMouseOver = !this.isMouseOver;
+  }
+
+  onMudouValor(evento: any){
+    console.log('Valor mudou: ', evento.novoValor);
   }
 
 }
