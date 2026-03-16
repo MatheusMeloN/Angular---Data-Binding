@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { MeuForm } from "../meu-form/meu-form";
+import { InputProperty } from "../input-property/input-property";
 
 @Component({
   selector: 'app-data-binding',
-  imports: [MeuForm],
+  imports: [MeuForm, InputProperty],
   templateUrl: './data-binding.html',
   styleUrl: './data-binding.scss',
 })
@@ -19,6 +20,8 @@ export class DataBinding {
   valorSalvo: string = '';
 
   isMouseOver: boolean = false;
+
+  nomeDoCurso: string = 'Angular';
 
   getValor(){
     return 1;
