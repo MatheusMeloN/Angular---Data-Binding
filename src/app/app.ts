@@ -4,8 +4,7 @@ import { Ciclo } from "./ciclo/ciclo";
 
 @Component({
   selector: 'app-root',
-  imports: [//DataBinding,
-    Ciclo],
+  imports: [DataBinding /*, Ciclo*/],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
